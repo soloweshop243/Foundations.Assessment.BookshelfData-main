@@ -1,49 +1,50 @@
 <!DOCTYPE html>
-<header><nav>
-  <ul>
-    <li><a href="https://www.techopedia.com/definition/12898/lorem-ipsum#:~:text=Lorem%20ipsum%2C%20in%20graphical%20and,translated%20as%20%22pain%20itself.%22">Home</a></li>
-    <li><a href="https://www.lipsum.com/">About</a></li>
-    <li><a href="tel: 6031112298p000">Contact</a></li>
-   
-  </ul>
-</nav></header>
+<html>
   <head>
     <title>Rodney's Bookshelf Sorting</title>
     
     <link rel="stylesheet" href="main.css"/>
     
-    <script src="book-data.js"></script>
-    
+    <script src="book.js"></script>
+    <script src="bookshelf.js"></script>
+    <script src="index.js"></script>
   </head>
   <body>
-    <h1>Rodney's Bookshelf Sorting</h1>
-        <h2>My Bookshelf</h2>
-        <div id="bookshelf"></div>
-        <div id="app">
-          <div></div>
-        </div>
-        
-        <div class="controls">
-          <label for="search-input">Search:</label>
-          <input type="text" id="search-btn" placeholder="Title, author, or subject">
-          <button id="search-btn">Search</button>
-  
-          <label for="sort-by">Sort by:</label>
-          <select id="sort-by">
-            <option value="title">Title</option>
-            <option value="author">Author</option>
-            <option value="subject">Subject</option>
-          </select>
-          <button id="sort-direction-btn">&#x2191;</button>
-        </div>
-  
-          <h3>My Favorite Books</h3>
-          <ul class="favorite-list"></ul>
-          <p>Total Favorites: <span class="favorites-count"></span></p>
-         
+    <header>
+      <nav>
+        <ul>
+          <li><a href="https://www.techopedia.com/definition/12898/lorem-ipsum#:~:text=Lorem%20ipsum%2C%20in%20graphical%20and,translated%20as%20%22pain%20itself.%22">Home</a></li>
+          <li><a href="https://www.lipsum.com/">About</a></li>
+          <li><a href="tel: 6031112298p000">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
 
-          
-          <script src="index.js"></script>
+    <h1>Rodney's Bookshelf Sorting</h1>
+    <h2>My Bookshelf</h2>
+    <div id="bookshelf"></div>
+    <div id="app">
+      <div></div>
+    </div>
+        
+    <div class="controls">
+      <label for="search-input">Search:</label>
+      <input type="text" id="search-input" placeholder="Title, author, or subject">
+      <button id="search-btn">Search</button>
+  
+      <label for="sort-by">Sort by:</label>
+      <select id="sort-by">
+        <option value="title">Title</option>
+        <option value="author">Author</option>
+        <option value="subject">Subject</option>
+      </select>
+      <button id="sort-direction-btn">&#x2191;</button>
+    </div>
+  
+    <h3>My Favorite Books</h3>
+    <ul class="favorite-list"></ul>
+    <p>Total Favorites: <span class="favorites-count"></span></p>
+
+    <footer></footer>
   </body>
-  <footer></footer>
 </html>
