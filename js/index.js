@@ -11,7 +11,7 @@ class Book {
 }
 
 class Bookshelf {
-  constructor() {
+  constructor(book) {
     this.books = [];
     this.favorites = new Set();
     this.sortBy = 'title'; // default sort by title
@@ -30,7 +30,7 @@ class Bookshelf {
     }
   }
 
-  updateBook(book) {
+  updateBook() {
     // TODO: Implement book updating
   }
 
