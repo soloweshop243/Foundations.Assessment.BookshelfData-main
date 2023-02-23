@@ -90,15 +90,11 @@ class Book {
   
       commentSection.append(commentForm);
   
-      this.comments.forEach((comment) => {
-        const commentItem = document.createElement('li');
-        commentItem.textContent = comment;
-        commentList.appendChild(commentItem);
+      
       
   
-      
-      return bookDiv
+     
 
-    })
+  
     
   

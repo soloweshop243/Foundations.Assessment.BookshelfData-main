@@ -1,69 +1,48 @@
-// Defines Book and Bookshelf classes  and uses them to create the html.
-class Book {
-  constructor(title, author, genre, pageCount) {
-    this.title = title;
-    this.author = author;
-    this.genre = genre;
-    this.pageCount = pageCount;
-    this.render = false;
-    this.favorite = false;
-    this.comments = []
-  }
-}
 
-class Bookshelf {
-  constructor() {
-    this.books = [];
-    this.favorites = new Set();
-    this.sortBy = 'title'; // default sort by title
-    this.sortDirection = 'asc'; // default sort direction is ascending
-    this.filterQuery = ''; // default filter query is empty string
-  }
-
-  addBook(book) {
+  addBook(book);{
     this.books.push(book);
   }
 
-  removeBook(book) {
+  removeBook(book); {
     const index = this.books.indexOf(book);
     if (index > -1) {
       this.books.splice(index, 1);
     }
   }
 
-  updateBook() {
+  updateBook();;{
     //  Implement book updating
   }
 
-  clearBooks() {
+  clearBooks(); {
     this.books = [];
   }
 
-  getBooks() {
-    return this.books;
+  getBooks(); {
+   this.books;
   }
 
-  setSortBy(sortBy) {
+  setSortBy(sortBy) ;{
     this.sortBy = sortBy;
   }
 
-  setSortDirection(sortDirection) {
+  setSortDirection(sortDirection) ;{
     this.sortDirection = sortDirection;
   }
 
-  setFilterQuery(filterQuery) {
+  setFilterQuery(filterQuery); {
     this.filterQuery = filterQuery;
   }
 
-  sortBooks() {
+  sortBooks() ;{
     //  Implement book sorting
   }
 
-  filterBooks() {
+  filterBooks();{
     //  Implement book filtering
   }
 
-  render() {
+  render() ;{
     let bookshelfElem = document.createElement('div');
     bookshelfElem.classList.add('bookshelf');
 
@@ -115,13 +94,13 @@ class Bookshelf {
       bookListElem.appendChild(bookElem);
     });
 
-    return bookshelfElem;
+   
   }
-}
-console.log("hello world")
 
 
-console.log("hello worldd")
+
+
+
 
 
 
