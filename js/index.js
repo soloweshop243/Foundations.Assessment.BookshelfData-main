@@ -1,16 +1,30 @@
+function addBook() {
+  // Get the values from the form inputs
+  const title = document.querySelector('#title').value;
+  const author = document.querySelector('#author').value;
+  const subject = document.querySelector('#subject').value;
+  const language = document.querySelector('#language').value;
 
-  addBook(book);{
-    this.books.push(book);
-  }
+  // Create a new Book instance with the values
+  const book = new Book(title, author, subject, language);
 
-  removeBook(book); {
-    const index = this.books.indexOf(book);
+  // Add the book to the bookshelf
+  bookshelf.addBook(book);
+
+  // Re-render the bookshelf
+  renderBookshelf(bookshelf);
+}
+
+
+  
+ function removeBook(book);
+    let index = this.books.indexOf(book);
     if (index > -1) {
       this.books.splice(index, 1);
     }
-  }
+  
 
-  updateBook();;{
+  updateBook();{
     //  Implement book updating
   }
 
@@ -22,15 +36,15 @@
    this.books;
   }
 
-  setSortBy(sortBy) ;{
+  sortBy(sortBy) ;{
     this.sortBy = sortBy;
   }
 
-  setSortDirection(sortDirection) ;{
+  sortDirection(sortDirection) ;{
     this.sortDirection = sortDirection;
   }
 
-  setFilterQuery(filterQuery); {
+  filterQuery(filterQuery); {
     this.filterQuery = filterQuery;
   }
 
@@ -86,12 +100,12 @@
     controlsElem.append(sortDirectionBtnElem);
 
   let bookListElem = document.createElement('ul');
-    bookshelfElem.appendChild(bookListElem);
+    bookshelfElem.append(bookListElem);
 
     this.books.forEach(book => {
       const bookElem = document.createElement('li');
       bookElem.textContent = `${book.title} by ${book.author}`;
-      bookListElem.appendChild(bookElem);
+      bookListElem.append(bookElem);
     });
 
    
