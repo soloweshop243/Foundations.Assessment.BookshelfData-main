@@ -36,16 +36,7 @@ render() {
       book.favorite = true;
     }
   }
-
-  setSortBy(sortBy) {
-    if (this.sortBy === sortBy) {
-      // toggle sort direction if same sortBy field is clicked
-      this.sortDirection = this.sortDirection === 'asc' ? 'desc' : 'asc';
-    } else {
-      this.sortBy = sortBy;
-      this.sortDirection = 'asc';
-    }
-  }
+  
 
   setFilterQuery(query) {
     this.filterQuery = query.toLowerCase(); // case-insensitive search
