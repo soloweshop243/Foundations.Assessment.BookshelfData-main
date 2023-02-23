@@ -18,16 +18,11 @@ class Book {
       this.comments.push(comment);
     }
   }
-  removeComment(comment); {
-    const index = this.comments.indexOf(comment);
-    if (index !== -1) {
-      this.comments.splice(index, 1);
-    }
-  }
+  
   
   // ... render book element with comments section ...
    
-  render(); {
+
     // Create book element and populate with data
     const bookDiv = document.createElement('div');
     bookDiv.classList.add('book');
@@ -79,7 +74,7 @@ class Book {
     const commentSendBtn = document.createElement('button');
     commentSendBtn.textContent
       
-  }   
+   
   
      
 

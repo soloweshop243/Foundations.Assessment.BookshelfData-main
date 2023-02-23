@@ -4,7 +4,7 @@ function addBook() {
   const author = document.querySelector('#author').value;
   const subject = document.querySelector('#subject').value;
   const language = document.querySelector('#language').value;
-
+}
   // Create a new Book instance with the values
   const bookshelf = new Bookshelf();
 
@@ -18,21 +18,11 @@ function addBook() {
   const bookshelfDiv = document.getElementById('bookshelf');
   renderBookshelf(bookshelf, bookshelfDiv);
   
-
-
-  
- function removeBook(book)
-    index = this.books.indexOf(book);
-    if (index > -1) {
-      this.books.splice(index, 1);
-    }
-  
-
-  function updateBook();{
+  function updateBook() 
     //  Implement book updating
-  }
 
-  render() ;{
+
+  render() 
     let bookshelfElem = document.createElement('div');
     bookshelfElem.classList.add('bookshelf');
 
@@ -84,14 +74,10 @@ function addBook() {
       bookListElem.append(bookElem);
     });
 
-   
-  }
+   console.log("hello world")
 
-console.log("hello world!");
+  
 
-
-
-}
 
 
 
