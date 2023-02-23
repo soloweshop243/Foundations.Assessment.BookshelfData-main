@@ -8,3 +8,18 @@ The backend team has got our API up, the library data is flowing, and a sample o
 This assessment will test your ability to design classes that show a solid understanding of OOP best practices and build a small project given high level descriptions.
 
 Refer to Canvas for more information as well as the rubric.
+
+# Book Class
+-properties
+    -title
+    -author
+    -subject
+    -language
+-rendering to html  
+# BookShelf Class
+    -container for the list of classes(BookshelfClass)
+    - add/remove books
+    -list of favorite books
+    -render to html
+    -sort the books
+    
