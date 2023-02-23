@@ -69,42 +69,42 @@ class Bookshelf {
 
     let controlsElem = document.createElement('div');
     controlsElem.classList.add('controls');
-    bookshelfElem.appendChild(controlsElem);
+    bookshelfElem.append(controlsElem);
 
     let searchInputElem = document.createElement('input');
     searchInputElem.setAttribute('type', 'text');
     searchInputElem.setAttribute('id', 'search-input');
     searchInputElem.setAttribute('placeholder', 'Title, author, or subject');
-    controlsElem.appendChild(searchInputElem);
+    controlsElem.append(searchInputElem);
 
     let searchBtnElem = document.createElement('button');
     searchBtnElem.setAttribute('id', 'search-btn');
     searchBtnElem.textContent = 'Search';
-    controlsElem.appendChild(searchBtnElem);
+    controlsElem.append(searchBtnElem);
 
    let sortByElem = document.createElement('select');
     sortByElem.setAttribute('id', 'sort-by');
-    controlsElem.appendChild(sortByElem);
+    controlsElem.append(sortByElem);
 
    let titleOptionElem = document.createElement('option');
     titleOptionElem.setAttribute('value', 'title');
     titleOptionElem.textContent = 'Title';
-    sortByElem.appendChild(titleOptionElem);
+    sortByElem.append(titleOptionElem);
 
     let authorOptionElem = document.createElement('option');
     authorOptionElem.setAttribute('value', 'author');
     authorOptionElem.textContent = 'Author';
-    sortByElem.appendChild(authorOptionElem);
+    sortByElem.append(authorOptionElem);
 
    let subjectOptionElem = document.createElement('option');
     subjectOptionElem.setAttribute('value', 'subject');
     subjectOptionElem.textContent = 'Subject';
-    sortByElem.appendChild(subjectOptionElem);
+    sortByElem.append(subjectOptionElem);
 
    let sortDirectionBtnElem = document.createElement('button');
     sortDirectionBtnElem.setAttribute('id', 'sort-direction-btn');
     sortDirectionBtnElem.innerHTML = '&#x2191;';
-    controlsElem.appendChild(sortDirectionBtnElem);
+    controlsElem.append(sortDirectionBtnElem);
 
   let bookListElem = document.createElement('ul');
     bookshelfElem.appendChild(bookListElem);
