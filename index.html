@@ -5,9 +5,10 @@
     
     <link rel="stylesheet" href="main.css"/>
     
-    <script src="book.js"></script>
-    <script src="bookshelf.js"></script>
-    <script src="index.js"></script>
+    <script defer src="/book-data.js"></script>
+    <script defer src="/js/bookclass.js"></script>
+    <script defer src="/js/bookshelfclass.js"></script>
+    <script defer src="/js/index.js"></script>
   </head>
   <body>
     <header>
@@ -22,6 +23,7 @@
 
     <h1>Rodney's Bookshelf Sorting</h1>
     <h2>My Bookshelf</h2>
+
     <div id="bookshelf"></div>
     <div id="app">
       <div></div>
@@ -44,7 +46,7 @@
     <h3>My Favorite Books</h3>
     <ul class="favorite-list"></ul>
     <p>Total Favorites: <span class="favorites-count"></span></p>
-
+    
     <footer></footer>
   </body>
 </html>

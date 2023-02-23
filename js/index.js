@@ -1,4 +1,4 @@
-// Define Book and Bookshelf classes first
+// Defines Book and Bookshelf classes 
 class Book {
   constructor(title, author, genre, pageCount) {
     this.title = title;
@@ -7,6 +7,7 @@ class Book {
     this.pageCount = pageCount;
     this.render = false;
     this.favorite = false;
+    this.comments = []
   }
 }
 
@@ -31,7 +32,7 @@ class Bookshelf {
   }
 
   updateBook() {
-    // TODO: Implement book updating
+    //  Implement book updating
   }
 
   clearBooks() {
@@ -55,11 +56,11 @@ class Bookshelf {
   }
 
   sortBooks() {
-    // TODO: Implement book sorting
+    //  Implement book sorting
   }
 
   filterBooks() {
-    // TODO: Implement book filtering
+    //  Implement book filtering
   }
 
   render() {
