@@ -28,34 +28,6 @@ function addBook() {
     //  Implement book updating
   }
 
-  clearBooks(); {
-    this.books = [];
-  }
-
-  getBooks(); {
-   this.books;
-  }
-
-  sortBy(sortBy) ;{
-    this.sortBy = sortBy;
-  }
-
-  sortDirection(sortDirection) ;{
-    this.sortDirection = sortDirection;
-  }
-
-  filterQuery(filterQuery); {
-    this.filterQuery = filterQuery;
-  }
-
-  sortBooks() ;{
-    //  Implement book sorting
-  }
-
-  filterBooks();{
-    //  Implement book filtering
-  }
-
   render() ;{
     let bookshelfElem = document.createElement('div');
     bookshelfElem.classList.add('bookshelf');
