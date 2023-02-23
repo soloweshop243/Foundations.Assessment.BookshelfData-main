@@ -6,14 +6,18 @@ function addBook() {
   const language = document.querySelector('#language').value;
 
   // Create a new Book instance with the values
-  const book = new Book(title, author, subject, language);
+  const bookshelf = new Bookshelf();
 
-  // Add the book to the bookshelf
-  bookshelf.addBook(book);
-
-  // Re-render the bookshelf
-  renderBookshelf(bookshelf);
-}
+  // Add books to the bookshelf
+  bookData.forEach((book) => {
+    const newBook = new Book(book.title, book.author, book.subject, book.language);
+    bookshelf.addBook(newBook);
+  });
+  
+  // Render the bookshelf
+  const bookshelfDiv = document.getElementById('bookshelf');
+  renderBookshelf(bookshelf, bookshelfDiv);
+  
 
 
   
@@ -87,7 +91,7 @@ console.log("hello world!");
 
 
 
-
+}
 
 
 

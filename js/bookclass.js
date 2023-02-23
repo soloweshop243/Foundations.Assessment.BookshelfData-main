@@ -7,9 +7,8 @@ class Book {
       this.author = author;
       this.subject = subject;
       this.language = language;
-      this.render = false;
-      this.favorite = false;
       this.comments = [];
+      this.favorite = false;
     }
     toggleFavorite() {
       this.favorite = !this.favorite;
@@ -19,79 +18,68 @@ class Book {
       this.comments.push(comment);
     }
   }
+  removeComment(comment); {
+    const index = this.comments.indexOf(comment);
+    if (index !== -1) {
+      this.comments.splice(index, 1);
+    }
+  }
   
   // ... render book element with comments section ...
    
-      let bookDiv = document.createElement('div');
-      bookDiv.classList.add('book');
-    
-      let title = document.createElement('h2');
-      title.textContent = this.title;
-      bookDiv.append(title);
-    
-      let author = document.createElement('p');
-      author.textContent = `by ${this.author}`;
-      bookDiv.append(author);
-    
-      let subject = document.createElement('p');
-      subject.textContent = `Subject: ${this.subject}`;
-      bookDiv.append(subject);
-    
-      let language = document.createElement('p');
-      language.textContent = `Language: ${this.language}`;
-      bookDiv.append(language);
-    
-      let favoriteBtn = document.createElement('button');
-      favoriteBtn.textContent = this.favorite ? 'Unfavorite' : 'Favorite';
-      favoriteBtn.addEventListener('click', () => {
-        this.toggleFavorite();
-        renderBookshelf(bookshelf);
-      });
-      bookDiv.append(favoriteBtn);
-    
-      let favoriteIndicator = document.createElement('span');
-      favoriteIndicator.textContent = '❤️';
-      favoriteIndicator.classList.add('favorite-indicator');
-      if (this.favorite) {
-        favoriteIndicator.classList.add('favorite');
-      }
-      bookDiv.append(favoriteIndicator);
-      let commentSection = document.createElement('div');
-      commentSection.classList.add('comment-section');
-  
-      let commentHeader = document.createElement('h3');
-      commentHeader.textContent = 'Comments';
-      commentSection.append(commentHeader);
-  
-      let commentList = document.createElement('ul');
-      commentList.classList.add('comment-list');
-      commentSection.append(commentList);
-  
-      let commentForm = document.createElement('form');
-      commentForm.addEventListener('submit', (event) => {
-        event.preventDefault();
-        let input = commentForm.querySelector('input[type="text"]');
-        if (input.value.trim() !== '') {
-          this.addComment(input.value.trim());
-          input.value = '';
-          renderBookshelf(bookshelf);
-        }
-      });
-  
-     let commentInput = document.createElement('input');
-      commentInput.setAttribute('type', 'text');
-      commentInput.setAttribute('placeholder', 'Type your comment here');
-      commentForm.append(commentInput);
-  
-      let commentButton = document.createElement('button');
-      commentButton.setAttribute('type', 'submit');
-      commentButton.textContent = 'Send';
-      commentForm.append(commentButton);
-  
-      commentSection.append(commentForm);
-  
+  render(); {
+    // Create book element and populate with data
+    const bookDiv = document.createElement('div');
+    bookDiv.classList.add('book');
+
+    const title = document.createElement('h2');
+    title.textContent = this.title;
+    bookDiv.appendChild(title);
+
+    const author = document.createElement('p');
+    author.textContent = `by ${this.author}`;
+    bookDiv.appendChild(author);
+
+    const subject = document.createElement('p');
+    subject.textContent = `Subject: ${this.subject}`;
+    bookDiv.appendChild(subject);
+
+    const language = document.createElement('p');
+    language.textContent = `Language: ${this.language}`;
+    bookDiv.appendChild(language);
+
+    // Render comments section
+    const commentsSection = document.createElement('div');
+    commentsSection.classList.add('comments-section');
+    bookDiv.appendChild(commentsSection);
+
+    const commentsTitle = document.createElement('h3');
+    commentsTitle.textContent = 'Comments';
+    commentsSection.appendChild(commentsTitle);
+
+    const commentsList = document.createElement('ul');
+    commentsList.classList.add('comments-list');
+    commentsSection.appendChild(commentsList);
+
+    this.comments.forEach((comment) => {
+      const commentLi = document.createElement('li');
+      commentLi.textContent = comment;
+      commentsList.appendChild(commentLi);
+    });
+
+    const addCommentBtn = document.createElement('button');
+    addCommentBtn.textContent = 'Add Comment';
+    commentsSection.appendChild(addCommentBtn);
+
+    const commentInput = document.createElement('input');
+    commentInput.setAttribute('type', 'text');
+    commentInput.setAttribute('placeholder', 'Add a comment (max 280 characters)');
+    commentsSection.appendChild(commentInput);
+
+    const commentSendBtn = document.createElement('button');
+    commentSendBtn.textContent
       
-      
+  }   
   
      
 
