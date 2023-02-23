@@ -12,7 +12,7 @@ class Book {
 }
 
 class Bookshelf {
-  constructor(book) {
+  constructor() {
     this.books = [];
     this.favorites = new Set();
     this.sortBy = 'title'; // default sort by title
@@ -64,49 +64,49 @@ class Bookshelf {
   }
 
   render() {
-    const bookshelfElem = document.createElement('div');
+    let bookshelfElem = document.createElement('div');
     bookshelfElem.classList.add('bookshelf');
 
-    const controlsElem = document.createElement('div');
+    let controlsElem = document.createElement('div');
     controlsElem.classList.add('controls');
     bookshelfElem.appendChild(controlsElem);
 
-    const searchInputElem = document.createElement('input');
+    let searchInputElem = document.createElement('input');
     searchInputElem.setAttribute('type', 'text');
     searchInputElem.setAttribute('id', 'search-input');
     searchInputElem.setAttribute('placeholder', 'Title, author, or subject');
     controlsElem.appendChild(searchInputElem);
 
-    const searchBtnElem = document.createElement('button');
+    let searchBtnElem = document.createElement('button');
     searchBtnElem.setAttribute('id', 'search-btn');
     searchBtnElem.textContent = 'Search';
     controlsElem.appendChild(searchBtnElem);
 
-    const sortByElem = document.createElement('select');
+   let sortByElem = document.createElement('select');
     sortByElem.setAttribute('id', 'sort-by');
     controlsElem.appendChild(sortByElem);
 
-    const titleOptionElem = document.createElement('option');
+   let titleOptionElem = document.createElement('option');
     titleOptionElem.setAttribute('value', 'title');
     titleOptionElem.textContent = 'Title';
     sortByElem.appendChild(titleOptionElem);
 
-    const authorOptionElem = document.createElement('option');
+    let authorOptionElem = document.createElement('option');
     authorOptionElem.setAttribute('value', 'author');
     authorOptionElem.textContent = 'Author';
     sortByElem.appendChild(authorOptionElem);
 
-    const subjectOptionElem = document.createElement('option');
+   let subjectOptionElem = document.createElement('option');
     subjectOptionElem.setAttribute('value', 'subject');
     subjectOptionElem.textContent = 'Subject';
     sortByElem.appendChild(subjectOptionElem);
 
-    const sortDirectionBtnElem = document.createElement('button');
+   let sortDirectionBtnElem = document.createElement('button');
     sortDirectionBtnElem.setAttribute('id', 'sort-direction-btn');
     sortDirectionBtnElem.innerHTML = '&#x2191;';
     controlsElem.appendChild(sortDirectionBtnElem);
 
-    const bookListElem = document.createElement('ul');
+  let bookListElem = document.createElement('ul');
     bookshelfElem.appendChild(bookListElem);
 
     this.books.forEach(book => {
@@ -118,8 +118,8 @@ class Bookshelf {
     return bookshelfElem;
   }
 }
+console.log("hello world")
 
-const bookshelf = new Bookshelf();
 
 
 

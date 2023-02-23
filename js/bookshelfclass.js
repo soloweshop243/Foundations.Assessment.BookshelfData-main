@@ -12,7 +12,7 @@ class Bookshelf {
   }
 render() {
   removeBook(book) ;
-    const index = this.books.indexOf(book);
+    let index = this.books.indexOf(book);
     if (index !== -1) {
       this.books.splice(index, 1);
     }
@@ -53,13 +53,12 @@ render() {
 
   getFilteredBooks() {
     return this.books.filter(book =>
-      book.title.toLowerCase().includes(this.filterQuery) ||
-      book.author.toLowerCase().includes(this.filterQuery) ||
-      book.subject.toLowerCase().includes(this.filterQuery) ||
+      book.title.toLowerCase().includes(this.filterQuery),
+      book.author.toLowerCase().includes(this.filterQuery),
+      book.subject.toLowerCase().includes(this.filterQuery),
       book.language.toLowerCase().includes(this.filterQuery)
-    );
+    )
   }
+}
   
-
   
-  }
