@@ -17,14 +17,14 @@ function addBook() {
 
 
   
- function removeBook(book);
-    let index = this.books.indexOf(book);
+ function removeBook(book)
+    index = this.books.indexOf(book);
     if (index > -1) {
       this.books.splice(index, 1);
     }
   
 
-  updateBook();{
+  function updateBook();{
     //  Implement book updating
   }
 
@@ -111,7 +111,7 @@ function addBook() {
    
   }
 
-
+console.log("hello world!");
 
 
 
