@@ -6,12 +6,12 @@ class Bookshelf {
     this.sortDirection = 'asc'; // default sort direction is ascending
     this.filterQuery = ''; // default filter query is empty string
   }
-render() {
-}
+
   addBook(book) {
     this.books.push(book);
   }
-
+  render() {
+  }
   removeBook(book) {
     const index = this.books.indexOf(book);
     if (index !== -1) {
@@ -75,4 +75,6 @@ render() {
 }
 
 
-  
+  render () {
+    
+  }
