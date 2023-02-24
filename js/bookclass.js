@@ -1,7 +1,7 @@
 //defines a Book class with properties for the book's 
 //title
 
-class Bookclass {
+class Book {
   constructor(title, author, subject, language) {
     this.title = title;
     this.author = author;

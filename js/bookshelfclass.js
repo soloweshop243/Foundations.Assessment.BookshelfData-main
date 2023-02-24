@@ -1,4 +1,4 @@
-class Bookshelfclass {
+class Bookshelf{
   constructor() {
     this.books = [];
     this.favorites = new Set();
@@ -17,6 +17,11 @@ class Bookshelfclass {
       this.books.splice(index, 1);
     }
   }
+render() {
+  let allBookRenders = this.books.map(book => book.render())
+  let bookSection = document.querySelector('.bookshelfclass-section')
+  return allBookRenders
+}
 
   updateBook(book) {
     // Find index of book to update
