@@ -3,12 +3,14 @@
 
 class Book {
     constructor(title, author, subject, language) {
-      this.title = title;
-      this.author = author;
-      this.subject = subject;
-      this.language = language;
-      this.comments = [];
-      this.favorite = false;
+      this.title = title
+      this.author = author
+      this.subject = subject
+      this.language = language
+      this.comments = []
+      this.favorite = false
+    }
+    render () {
     }
     toggleFavorite() {
       this.favorite = !this.favorite;
