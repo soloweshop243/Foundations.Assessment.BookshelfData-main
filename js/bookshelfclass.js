@@ -10,8 +10,7 @@ class Bookshelf {
   addBook(book) {
     this.books.push(book);
   }
-  render() {
-  }
+
   removeBook(book) {
     const index = this.books.indexOf(book);
     if (index !== -1) {
@@ -73,8 +72,3 @@ class Bookshelf {
     }
   }
 }
-
-
-  render () {
-    
-  }
