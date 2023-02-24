@@ -14,7 +14,7 @@ class Book {
   render() {
     // Implement book rendering
   }
-
+  
   toggleFavorite() {
     this.favorite = !this.favorite;
   }

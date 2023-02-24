@@ -14,6 +14,7 @@ class Bookshelf {}
     if (index !== -1) {
       this.books.splice(index, 1);
     }
+    
   function addBook() {
   // Get the values from the form inputs
   const bookshelfDiv = document.getElementById('bookshelf');
@@ -24,6 +25,15 @@ class Bookshelf {}
   const sortDirectionBtn = document.getElementById('sort-direction-btn');
   const favoriteList = document.querySelector('.favorite-list');
   const favoritesCount = document.querySelector('.favorites-count');
+  addBook.appendChild(bookshelfDiv);
+  addBook.appendChild(addBookForm);
+  addBook.appendChild(searchInput);
+  addBook.appendChild(searchBtn);
+  addBook.appendChild(sortBy);
+  addBook.appendChild(sortDirectionBtn);
+  addBook.appendChild(favoriteList);
+  addBook.appendChild(favoritesCount);
+
 }
 
 
@@ -43,37 +53,37 @@ class Bookshelf {}
   const book = new book(title, author, subject, language);
 bookshelf.addBook(book);
 
-  
-  
   // Render the bookshelf
   renderBookshelf(bookshelf, bookshelfDiv);
   
   function updateBook() 
     //  Implement book updating
-
+    
 
   // Set up event listeners for the add book form
-addBookForm.addEventListener('submit', (event) => {
-  event.preventDefault(); // prevent the form from submitting
+  addBookForm.addEventListener('submit', (event) => {
+    event.preventDefault(); // prevent the form from submitting
+  
+    // Get the values from the form inputs
+    const title = document.querySelector('#title-input').value;
+    const author = document.querySelector('#author-input').value;
+    const subject = document.querySelector('#subject-input').value;
+    const language = document.querySelector('#language-input').value;
+  
+    // Create a new Book instance with the values
+    const newBook = new Book(title, author, subject, language);
+  
+    // Add the new book to the bookshelf
+    bookshelf.addBook(newBook);
+  
+    // Render the new book
+    renderBook(newBook, bookshelfDiv);
+  
+    // Reset the form inputs
+    addBookForm.reset();
+  });
 
-  // Get the values from the form inputs
-  const title = document.querySelector('#title-input').value;
-  const author = document.querySelector('#author-input').value;
-  const subject = document.querySelector('#subject-input').value;
-  const language = document.querySelector('#language-input').value;
-
-  // Create a new Book instance with the values
-  const newBook = new Book(title, author, subject, language);
-
-  // Add the new book to the bookshelf
-  bookshelf.addBook(newBook);
-
-  // Re-render the bookshelf
-  renderBookshelf(bookshelf, bookshelfDiv);
-
-  // Reset the form inputs
-  addBookForm.reset();
-});
+  
 
 // Set up event listener for search button
 searchBtn.addEventListener('click', () => {
