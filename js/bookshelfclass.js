@@ -1,4 +1,4 @@
-class Bookshelf {
+class Bookshelfclass {
   constructor() {
     this.books = [];
     this.favorites = new Set();

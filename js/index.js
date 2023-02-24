@@ -61,9 +61,13 @@ bookshelf.addBook(book);
     
 
   // Set up event listeners for the add book form
-  addBookForm.addEventListener('submit', (event) => {
+  add-book-form.addEventListener('submit', (event) => {
     event.preventDefault(); // prevent the form from submitting
-  
+    add-book-form.appendChild();
+  let BookForm = document.createElement('form');
+  BookForm.appendChild(BookForm);
+
+
     // Get the values from the form inputs
     const title = document.querySelector('#title-input').value;
     const author = document.querySelector('#author-input').value;
@@ -80,7 +84,7 @@ bookshelf.addBook(book);
     renderBook(newBook, bookshelfDiv);
   
     // Reset the form inputs
-    addBookForm.reset();
+    add-book-form.reset();
   });
 
   
