@@ -1,8 +1,9 @@
 
-class Bookshelf {
-  constructor(); {
+class Bookshelf {}
+  constructor (); {}
+  {  this.bookshelf = new Bookshelf  (); }
     this.books = [];
-  }
+  
 
   addBook(book); {
     this.books.push(book);
@@ -13,7 +14,7 @@ class Bookshelf {
     if (index !== -1) {
       this.books.splice(index, 1);
     }
-  }function addBook(); {
+  function addBook() {
   // Get the values from the form inputs
   const bookshelfDiv = document.getElementById('bookshelf');
   const addBookForm = document.getElementById('add-book-form');
@@ -33,13 +34,13 @@ class Bookshelf {
   addComment(book, comment); {
     book.addComment(comment);
   }
-}
+
 
   // Create a new Book instance with the values
   const bookshelf = new Bookshelf();
 
   // Add books to the bookshelf
-  const book = new Book(title, author, subject, language);
+  const book = new book(title, author, subject, language);
 bookshelf.addBook(book);
 
   
@@ -112,9 +113,10 @@ bookshelfDiv.addEventListener('click', (event) => {
     renderFavoritesCount(bookshelf.favorites.size, favoritesCount);
   }
 });
+console.log('hello world ')
 
 
-  
+}
 
 
 
