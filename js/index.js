@@ -125,6 +125,8 @@ bookshelfDiv.addEventListener('click', (event) => {
 
     renderFavorites(bookshelf.favorites, favoriteList);
     renderFavoritesCount(bookshelf.favorites.size, favoritesCount);
+
+    return favoriteList  && favoritesCount && favorites
   }
 });
 
