@@ -19,11 +19,22 @@ class Bookshelf{
   }
 render() {
   let allBookRenders = this.books.map(book => book.render())
-  let bookSection = document.querySelector('.bookshelfclass-section')
+  // grabs the section form html
+  let shelfSection = document.querySelector('.bookshelfclass-section')
+  //loop through allBookRenders and append them to the section
+  for (let book of allBookRenders) {
+    shelfSection.appendChild(book.render())
   return allBookRenders
 }
+addComment(book, comment);{
+  const index = this.books.indexOf(book);
+  if (index !== -1) {
+    book.comments.push(comment);
+    this.updateBook(book);
+  }
+}
 
-  updateBook(book) {
+  updateBook(book); {
     // Find index of book to update
     const index = this.books.findIndex(b => b.title === book.title);
     if (index !== -1) {
@@ -32,11 +43,11 @@ render() {
     }
   }
 
-  clearBooks() {
+  clearBooks(); {
     this.books = [];
   }
 
-  toggleFavorite(book) {
+  toggleFavorite(book); {
     if (this.favorites.has(book)) {
       this.favorites.delete(book);
       book.favorite = false;
@@ -46,7 +57,7 @@ render() {
     }
   }
 
-  setSortBy(sortBy) {
+  setSortBy(sortBy); {
     if (this.sortBy === sortBy) {
       // toggle sort direction if same sortBy field is clicked
       this.sortDirection = this.sortDirection === 'asc' ? 'desc' : 'asc';
@@ -56,11 +67,11 @@ render() {
     }
   }
 
-  setFilterQuery(query) {
+  setFilterQuery(query); {
     this.filterQuery = query.toLowerCase(); // case-insensitive search
   }
 
-  getFilteredBooks() {
+  getFilteredBooks(); {
     return this.books.filter(book =>
       book.title.toLowerCase().includes(this.filterQuery) ||
       book.author.toLowerCase().includes(this.filterQuery) ||
@@ -69,11 +80,5 @@ render() {
     );
   }
 
-  addComment(book, comment) {
-    const index = this.books.indexOf(book);
-    if (index !== -1) {
-      book.comments.push(comment);
-      this.updateBook(book);
-    }
-  }
-}
+  
+}}

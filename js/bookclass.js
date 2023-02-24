@@ -35,17 +35,21 @@ class Book {
     // Implement book rendering
   
   
-   toggleFavorite();{
+   toggleFavorite() ;{
      this.favorite = !this.favorite;
+     let toggleFavorite = document.createElement('favorites');
+     favorite.appendChild(toggleFavorite)
      
-  
+   }
   
    addComment(comment); {
      this.comments.push(comment);
+     let addComment = document.createElement('comment');
+     comment.appendChild(addComment)
 
    }
     
      
 
   
-   }
+   
