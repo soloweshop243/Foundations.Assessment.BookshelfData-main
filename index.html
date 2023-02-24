@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Rodney's Bookshelf Sorting</title>
+    <title>Rodney's Bookshelf App</title>
     
     <link rel="stylesheet" href="main.css"/>
   
@@ -21,34 +21,51 @@
       </nav>
     </header>
 
-    <h1>Rodney's Bookshelf Sorting</h1>
+    <h1>Rodney's Bookshelf Application</h1>
     <h2>My Bookshelf</h2>
 
     <div id="bookshelf"></div>
+    
+
     <div id="app">
       <div></div>
     </div>
       <main>
         <section class="bookshelfclass"></main><section></section>
       </main>    
-    <div class="controls">
+    <!-- <div class="controls">
       <label for="search-input">Search:</label>
       <input type="text" id="search-input" placeholder="Title, author, subject, language">
-      <button id="search-btn">Search</button>
+      <button id="search-btn">Search</button> -->
   
+      <form id="add-book-form">
+        <label for="title-input">Title:</label>
+        <input type="text" id="title-input" name="title">
       
-      <select id="sort-by">
+        <label for="author-input">Author:</label>
+        <input type="text" id="author-input" name="author">
+      
+        <label for="subject-input">Subject:</label>
+        <input type="text" id="subject-input" name="subject">
+      
+        <label for="language-input">Language:</label>
+        <input type="text" id="language-input" name="language">
+      
+        <button type="submit">Add Book</button>
+      </form>
+      
+      <!-- <select id="sort-by">
         <option value="title">Title</option>
         <option value="author">Author</option>
         <option value="subject">Subject</option>
         <option value="language">Language</option>  
       </select>
-      <button id="sort-direction-btn">&#x2191;</button>
-    </div>
+      <button id="sort-direction-btn">&#x2191;</button> -->
+    <!-- </div> -->
   
     <h3>My Favorite Books</h3>
     <ul class="favorite-list"></ul>
-    <p>Total Favorites: <span class="favorites-count"></span></p>
+    <p>Total Favorites: <span class="favorites-count"></span></p> 
     
     <footer></footer>
   </body>

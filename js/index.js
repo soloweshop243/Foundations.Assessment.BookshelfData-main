@@ -1,80 +1,118 @@
-function addBook() {
+
+class Bookshelf {
+  constructor(); {
+    this.books = [];
+  }
+
+  addBook(book); {
+    this.books.push(book);
+  }
+
+  removeBook(book); {
+    const index = this.books.indexOf(book);
+    if (index !== -1) {
+      this.books.splice(index, 1);
+    }
+  }function addBook(); {
   // Get the values from the form inputs
-  const title = document.querySelector('#title').value;
-  const author = document.querySelector('#author').value;
-  const subject = document.querySelector('#subject').value;
-  const language = document.querySelector('#language').value;
+  const bookshelfDiv = document.getElementById('bookshelf');
+  const addBookForm = document.getElementById('add-book-form');
+  const searchInput = document.getElementById('search-input');
+  const searchBtn = document.getElementById('search-btn');
+  const sortBy = document.getElementById('sort-by');
+  const sortDirectionBtn = document.getElementById('sort-direction-btn');
+  const favoriteList = document.querySelector('.favorite-list');
+  const favoritesCount = document.querySelector('.favorites-count');
 }
+
+
+  toggleFavorite(book); {
+    book.toggleFavorite();
+  }
+
+  addComment(book, comment); {
+    book.addComment(comment);
+  }
+}
+
   // Create a new Book instance with the values
   const bookshelf = new Bookshelf();
 
   // Add books to the bookshelf
-  bookData.forEach((book) => {
-    const newBook = new Book(book.title, book.author, book.subject, book.language);
-    bookshelf.addBook(newBook);
-  });
+  const book = new Book(title, author, subject, language);
+bookshelf.addBook(book);
+
+  
   
   // Render the bookshelf
-  const bookshelfDiv = document.getElementById('bookshelf');
   renderBookshelf(bookshelf, bookshelfDiv);
   
   function updateBook() 
     //  Implement book updating
 
 
-  render() 
-    let bookshelfElem = document.createElement('div');
-    bookshelfElem.classList.add('bookshelf');
+  // Set up event listeners for the add book form
+addBookForm.addEventListener('submit', (event) => {
+  event.preventDefault(); // prevent the form from submitting
 
-    let controlsElem = document.createElement('div');
-    controlsElem.classList.add('controls');
-    bookshelfElem.append(controlsElem);
+  // Get the values from the form inputs
+  const title = document.querySelector('#title-input').value;
+  const author = document.querySelector('#author-input').value;
+  const subject = document.querySelector('#subject-input').value;
+  const language = document.querySelector('#language-input').value;
 
-    let searchInputElem = document.createElement('input');
-    searchInputElem.setAttribute('type', 'text');
-    searchInputElem.setAttribute('id', 'search-input');
-    searchInputElem.setAttribute('placeholder', 'Title, author, or subject');
-    controlsElem.append(searchInputElem);
+  // Create a new Book instance with the values
+  const newBook = new Book(title, author, subject, language);
 
-    let searchBtnElem = document.createElement('button');
-    searchBtnElem.setAttribute('id', 'search-btn');
-    searchBtnElem.textContent = 'Search';
-    controlsElem.append(searchBtnElem);
+  // Add the new book to the bookshelf
+  bookshelf.addBook(newBook);
 
-   let sortByElem = document.createElement('select');
-    sortByElem.setAttribute('id', 'sort-by');
-    controlsElem.append(sortByElem);
+  // Re-render the bookshelf
+  renderBookshelf(bookshelf, bookshelfDiv);
 
-   let titleOptionElem = document.createElement('option');
-    titleOptionElem.setAttribute('value', 'title');
-    titleOptionElem.textContent = 'Title';
-    sortByElem.append(titleOptionElem);
+  // Reset the form inputs
+  addBookForm.reset();
+});
 
-    let authorOptionElem = document.createElement('option');
-    authorOptionElem.setAttribute('value', 'author');
-    authorOptionElem.textContent = 'Author';
-    sortByElem.append(authorOptionElem);
+// Set up event listener for search button
+searchBtn.addEventListener('click', () => {
+  const query = searchInput.value.trim().toLowerCase(); // ignore leading/trailing white space and make case-insensitive
+  bookshelf.setFilterQuery(query);
+  renderBookshelf(bookshelf, bookshelfDiv);
+});
 
-   let subjectOptionElem = document.createElement('option');
-    subjectOptionElem.setAttribute('value', 'subject');
-    subjectOptionElem.textContent = 'Subject';
-    sortByElem.append(subjectOptionElem);
+// Set up event listener for sort by select menu
+sortBy.addEventListener('change', () => {
+  const sortByValue = sortBy.value;
+  bookshelf.setSortBy(sortByValue);
+  renderBookshelf(bookshelf, bookshelfDiv);
+});
 
-   let sortDirectionBtnElem = document.createElement('button');
-    sortDirectionBtnElem.setAttribute('id', 'sort-direction-btn');
-    sortDirectionBtnElem.innerHTML = '&#x2191;';
-    controlsElem.append(sortDirectionBtnElem);
+// Set up event listener for sort direction button
+sortDirectionBtn.addEventListener('click', () => {
+  bookshelf.toggleSortDirection();
+  renderBookshelf(bookshelf, bookshelfDiv);
+});
 
-  let bookListElem = document.createElement('ul');
-    bookshelfElem.append(bookListElem);
+// Render the favorites list and count
+renderFavorites(bookshelf.favorites, favoriteList);
+renderFavoritesCount(bookshelf.favorites.size, favoritesCount);
 
-    this.books.forEach(book => {
-      const bookElem = document.createElement('li');
-      bookElem.textContent = `${book.title} by ${book.author}`;
-      bookListElem.append(bookElem);
-    });
+// Set up event listener for adding/removing favorites
+bookshelfDiv.addEventListener('click', (event) => {
+  const target = event.target;
 
-   console.log("hello world")
+  if (target.classList.contains('favorite-btn')) {
+    const bookElem = target.closest('.book-card');
+    const book = bookshelf.getBookByTitle(bookElem.querySelector('.book-title').textContent);
+
+    bookshelf.toggleFavorite(book);
+
+    renderFavorites(bookshelf.favorites, favoriteList);
+    renderFavoritesCount(bookshelf.favorites.size, favoritesCount);
+  }
+});
+
 
   
 
