@@ -1,43 +1,69 @@
-//defines a Book class with properties for the book's 
-//title
+//defines a Book class with properties for the book's values 
 
 class Book {
-  constructor(title, author, subject, language) {
-    this.title = title;
-    this.author = author;
-    this.subject = subject;
-    this.language = language;
-    this.comments = [];
-    this.favorite = false;
+  constructor (form, title, author, subject, language, _comment) {
+    this.form = form;
+    this.title = title
+    this.author = author
+    this.subject = subject
+    this.language = language
+    this.comment = [] //can comment  later
+   
   }
+  // converts book properties to HTML 
+  /**
+   * 
+   * <div id="book-card"></div>
+   *  <h2> Title: </h2>
+   *  <h2> Author: </h2>
+   *  <h2> Subject: </h2>
+   *  <h3> Language: </h3>
+   *  <h3> Comment: </h3>
+   * <
+   * @returns 
+   */
   render() {
-  let title = document.createElement('title');
-  title.innerHTML = this.title
 
-  let author = document.createElement('author');
-  author.innerHTML = this.author
+  let form = document.createElement('form')
+  form.innerHTML = `${this.form} book-form`
 
-  let subject = document.createElement('subject');
-  subject.innerHTML = this.subject
+  let title = document.createElement('h1');
+  title.innerHTML = `${this.title} Title`
 
-  let language = document.createElement('language');
-  language.innerHTML = this.language
+  let author = document.createElement('h2');
+  author.innerHTML = `${this.author} Author`
+
+  let subject = document.createElement('h2');
+  subject.innerHTML = `${this.subject} Subject`
+
+  let language = document.createElement('h2');
+  language.innerHTML = `${this.language} Language`
 
 
-  let comment = document.createElement('comment');
-  comment.innerHTML = this.comment
+  let comment = document.createElement('h3');
+  comment.innerHTML = `${this.comment} Comment`
 
-  comment(this.comments); {
-    this.comments.push(comment);
-    let addComment = document.createElement('comment-input');
-    comment.appendChild(addComment)
+  // comment(this.comments); {
+  //   this.comments.push(comment);
+  //   let addComment = document.createElement('comment-input');
+  //   comment.appendChild(addComment)
 
-  }
-   
-  return Book
-}}
-     
-   
+    form.append(title)
+    form.append(author)
+    form.append(subject)
+    form.append(language)
+    form.append(comment)
+  
+    return form
+
+  }  
+// end of render function
+
+}    
+//  end of class
+
+
+let myBook = new Book( 'The JungleBook', 'Steve', 'Fiction', 'en', 'love')
   
    
      
