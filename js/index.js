@@ -16,14 +16,14 @@
   //   }
     
   //  function addBook() {
-  // Get the values from the form inputs
-  // const bookshelfDiv = document.getElementById('bookshelf');
-  // const addBookForm = document.getElementById('add-book-form');
-  // const searchInput = document.getElementById('search-input');
-  // const searchBtn = document.getElementById('search-btn');
-  // const sortBy = document.getElementById('sort-by');
-  // const sortDirectionBtn = document.getElementById('sort-direction-btn');
-  // const favoriteList = document.querySelector('.favorite-list');
+  //  Get the values from the form inputs
+  const bookshelfSection = document.getElementById('bookshelfClass');
+  const addBookForm = document.getElementById('add-book-form');
+  const searchInput = document.getElementById('search-input');
+  const searchBtn = document.getElementById('search-btn');
+  const sortBy = document.getElementById('sort-by');
+  const sortDirectionBtn = document.getElementById('sort-direction-btn');
+  const favoriteList = document.querySelector('.favorite-list');
  
 //   addBook.appendChild(bookshelf);
 //   addBook.appendChild(addBookForm);

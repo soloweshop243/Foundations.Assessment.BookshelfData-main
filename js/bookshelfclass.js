@@ -1,7 +1,7 @@
 class Bookshelf{
   constructor() {
     this.books = [];
-    this.favorites = new Set();
+    this.favorites = new[];
     this.sortBy = 'title'; // default sort by title
     this.filterQuery = ''; // default filter query is empty string
   }

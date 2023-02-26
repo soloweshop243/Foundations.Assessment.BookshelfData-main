@@ -1,19 +1,19 @@
 //defines a Book class with properties for the book's values 
 
 class Book {
-  constructor (form, title, author, subject, language, _comment) {
-    this.form = form;
+  constructor (form, title, author, subject, language, comment = []) {
+    this.form = form
     this.title = title
     this.author = author
     this.subject = subject
     this.language = language
-    this.comment = [] //can comment  later
+    this.comment = comment //can comment later
    
   }
   // converts book properties to HTML 
   /**
    * 
-   * <div id="book-card"></div>
+   * <form id="book-form">
    *  <h2> Title: </h2>
    *  <h2> Author: </h2>
    *  <h2> Subject: </h2>
