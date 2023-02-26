@@ -17,13 +17,13 @@
     
   //  function addBook() {
   //  Get the values from the form inputs
-  const bookshelfSection = document.getElementById('bookshelfClass');
-  const addBookForm = document.getElementById('add-book-form');
-  const searchInput = document.getElementById('search-input');
-  const searchBtn = document.getElementById('search-btn');
-  const sortBy = document.getElementById('sort-by');
-  const sortDirectionBtn = document.getElementById('sort-direction-btn');
-  const favoriteList = document.querySelector('.favorite-list');
+  // const bookshelfSection = document.getElementById('bookshelfClass');
+  // const addBookForm = document.getElementById('add-book-form');
+  // const searchInput = document.getElementById('search-input');
+  // const searchBtn = document.getElementById('search-btn');
+  // const sortBy = document.getElementById('sort-by');
+  // const sortDirectionBtn = document.getElementById('sort-direction-btn');
+  // const favoriteList = document.querySelector('.favorite-list');
  
 //   addBook.appendChild(bookshelf);
 //   addBook.appendChild(addBookForm);
@@ -120,7 +120,35 @@
 
 // console.log('Adding favorites');
 
+// Define the BookList class
+class BookList {
+  constructor() {
+    this.books = [];
+  }
+
+  addBook(book) {
+    this.books.push(book);
+  }
+}
+
+// Create some book objects
+const myBook1 = {title: 'Book 1', author: 'Author 1', subject: 'Subject 1', language: 'English'};
+const myBook2 = {title: 'Book 2', author: 'Author 2', subject: 'Subject 2', language: 'French'};
+const myBook3 = {title: 'Book 3', author: 'Author 3', subject: 'Subject 3', language: 'Spanish'};
+
+// Initialize the book list and add the books
+const bookList = new BookList();
+bookList.addBook(myBook1);
+bookList.addBook(myBook2);
+bookList.addBook(myBook3);
 
 
+// let myBook1= new Book( 'The JungleBook', 'Steve', 'Fiction', 'en', 'love')
+// let myBook2 = new Book( 'The Monkey Show', 'Mr X', 'Fiction', 'esp', 'peace')
+// let myBook3 = new Book( 'Mrs. Monkey mouth', 'Mrs. Nobody', 'Fiction', 'en', 'hate')
 
-
+// let bookList= new bookList()
+// bookList.addBook(myBook1)
+// bookList.addBook(myBook2)
+// bookList.addBook(myBook3)
+// console.log(new Book);

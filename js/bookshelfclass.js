@@ -7,12 +7,14 @@ class Bookshelf{
   }
 
   addBook(book) {
-    this.books.push(book);
+    this.books.push(book)
   }
 
   removeBook(book) {
+    // find index of books to remove
     const index = this.books.indexOf(book);
     if (index !== -1) {
+      // remove it from the list
       this.books.splice(index, 1);
     }
   }
