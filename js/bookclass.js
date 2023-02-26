@@ -29,22 +29,12 @@ class Book {
 
   return Book
 }}
-
-
-   
-    // Implement book rendering
-  
-  
-   toggleFavorite() ;{
-     this.favorite = !this.favorite;
-     let toggleFavorite = document.createElement('favorites');
-     favorite.appendChild(toggleFavorite)
      
-   }
+   
   
    addComment(comment); {
      this.comments.push(comment);
-     let addComment = document.createElement('comment');
+     let addComment = document.createElement('comment-input');
      comment.appendChild(addComment)
 
    }

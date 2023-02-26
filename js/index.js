@@ -5,11 +5,11 @@ class Bookshelf {}
     this.books = [];
   
 
-  addBook(book); {
-    this.books.push(book);
+  addBook(books); {
+    this.books.push(books);
   }
 
-  removeBook(book); {
+  removeBook(books); {
     const index = this.books.indexOf(book);
     if (index !== -1) {
       this.books.splice(index, 1);
@@ -36,11 +36,6 @@ class Bookshelf {}
 
 }
 
-
-  toggleFavorite(book); {
-    book.toggleFavorite();
-  }
-
   addComment(book, comment); {
     book.addComment(comment);
   }
@@ -63,11 +58,7 @@ bookshelf.addBook(book);
   // Set up event listeners for the add book form
   add-book-form.addEventListener('submit', (event) => {
     event.preventDefault(); // prevent the form from submitting
-    add-book-form.appendChild();
-  let BookForm = document.createElement('form');
-  BookForm.appendChild(BookForm);
-
-
+  
     // Get the values from the form inputs
     const title = document.querySelector('#title-input').value;
     const author = document.querySelector('#author-input').value;
@@ -136,4 +127,4 @@ bookshelfDiv.addEventListener('click', (event) => {
 
 
 
-console.log('hello world ')
+

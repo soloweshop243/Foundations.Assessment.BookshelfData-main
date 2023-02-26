@@ -3,6 +3,7 @@ html, body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  background-color: darkgreen;
 }
 
 /* Style the header and navigation links */
@@ -42,7 +43,7 @@ h3 {
 }
 
 /* Style the bookshelf container */
-#bookshelf {
+.bookshelf {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -50,18 +51,18 @@ h3 {
 }
 
 /* Style the add book form */
-#add-book-form {
+.add-book-form {
   display: flex;
   flex-direction: column;
   margin: 20px;
   max-width: 500px;
 }
 
-#add-book-form label {
+.add-book-form label {
   margin-top: 10px;
 }
 
-#add-book-form input {
+.add-book-form input {
   padding: 5px;
   font-size: 16px;
   border: 1px solid #ccc;
@@ -69,7 +70,7 @@ h3 {
   margin-top: 5px;
 }
 
-#add-book-form button {
+.add-book-form button {
   background-color: #333;
   color: white;
   padding: 10px;
@@ -78,7 +79,7 @@ h3 {
   margin-top: 10px;
 }
 
-#add-book-form button:hover {
+.add-book-form button:hover {
   cursor: pointer;
   background-color: #555;
 }
@@ -107,7 +108,7 @@ h3 {
   margin-top: 20px;
 }
 
-.comments-section h4 {
+.comments-section h1, .comments-   section h2, .comments- section h3{
   margin-top: 0;
   margin-bottom: 10px;
 }
