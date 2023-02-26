@@ -3,7 +3,6 @@ class Bookshelf{
     this.books = [];
     this.favorites = new Set();
     this.sortBy = 'title'; // default sort by title
-    this.sortDirection = 'asc'; // default sort direction is ascending
     this.filterQuery = ''; // default filter query is empty string
   }
 
