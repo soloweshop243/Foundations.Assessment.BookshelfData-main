@@ -10,6 +10,11 @@ class Book {
     this.comment = comment //can comment later
    
   }
+  addComment (comment) {
+    this.comment.push(comment)
+  }
+
+  
   // converts book properties to HTML 
   /**
    * 
@@ -40,13 +45,13 @@ class Book {
   language.innerHTML = `${this.language} Language`
 
 
-  let comment = document.createElement('h3');
+  let comment = document.createElement('p');
   comment.innerHTML = `${this.comment} Comment`
 
-  // comment(this.comments); {
-  //   this.comments.push(comment);
-  //   let addComment = document.createElement('comment-input');
-  //   comment.appendChild(addComment)
+   comment(this.comments); {
+    this.comments.push(comment);
+    let addComment = document.createElement('comment-input');
+    comment.appendChild(addComment)
 
     form.append(title)
     form.append(author)
@@ -55,15 +60,17 @@ class Book {
     form.append(comment)
   
     return form
+    
 
   }  
 // end of render function
 
-}    
+}  
+}  
 //  end of class
 
 
-let myBook = new Book( 'The JungleBook', 'Steve', 'Fiction', 'en', 'love')
+
   
    
      
